@@ -42,3 +42,6 @@ $(document).ready ->
       end: new Date(y, m, 29)
       url: "http://google.com/"
     ]
+    eventClick: (event) ->
+      window.open "http://asd.com"
+      false
