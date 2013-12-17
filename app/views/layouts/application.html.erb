@@ -16,6 +16,7 @@
 <% if alert %>
     <p class="alert alert-error"><%= alert %></p>
 <% end %>
+
 <%= yield %>
 <%= javascript_include_tag "jquery.js" %>
 <%= javascript_include_tag "fullcalendar" %>
