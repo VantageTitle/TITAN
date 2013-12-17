@@ -1,3 +1,34 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$("#opencm").click ->
+  opencm()
+  false
+
+opencm = ->
+  $("#closingmanager").fullCalendar
+    events: [
+      title: "My Event"
+      start: "2013-12-01"
+      url: "http://google.com/"
+    ,
+      title: "My Eventfsdfsdfsdfsdfsdfsdfsdfsfsdfsf"
+      start: "2013-12-01"
+      url: "http://google.com/"
+    ,
+      title: "My Event"
+      start: "2013-12-01"
+      url: "http://google.com/"
+    ,
+      title: "My Event"
+      start: "2013-12-01"
+      url: "http://google.com/"
+    ,
+      title: "My Event"
+      start: "2013-12-01"
+      url: "http://google.com/"
+    ,
+      title: "My Event"
+      start: "2013-12-01"
+      url: "http://google.com/"
+    ]
+    eventClick: (calEvent, jsEvent, view) ->
+      $("#edit").modal()
+      false

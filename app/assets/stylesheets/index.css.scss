@@ -1,11 +1,30 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 #content {
-  margin-top: 19px;
+  opacity: 0.6;
+}
+
+#closingmanager {
+  margin: auto;
+  width: 75%;
+}
+.calendarcontrol {
+  margin: 16px;
+  text-align: center;
+}
+#mainrow {
+  margin-right:0;
 }
 .modal {
   overflow-y: auto;
 }
-.row {
-  margin-right: 0px;
+#sidebar {
+  background-color: #f9f9f9;
+  padding-right: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
 }
 .sidebar {
   list-style: none;
