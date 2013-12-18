@@ -27,188 +27,19 @@
 </nav>
 <div class="row" id="mainrow">
   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="sidebar">
-    <ul class="nav sidebar">
-      <li class="active">
-        <a href="#">Dashboard</a>
+    <ul class="nav sidebar" id="sidenavlist">
+      <li id="dbli">
+        <a href="#" id="dba">Dashboard</a>
       </li>
-      <li>
-        <a href="#">RESPA Manager</a>
+      <li id="rsmli">
+        <a href="#" id="rsma" ><i class="fa fa-calendar"></i> RESPA Signing Manager</a>
       </li>
-      <li>
-        <a href="#" id="opencm">Closing Manager</a>
+      <li id="cmli">
+        <a href="#" id="cma"><i class="fa fa-calendar"></i> Closing Manager</a>
       </li>
     </ul>
   </div>
-  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="content">
-
-    <div class="calendarcontrol">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addclosing" style="width: 128px;">Add Closing</button>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addnotary" style="width: 128px;">Add Notary</button>
-    </div>
-    <div id="closingmanager"></div>
-
-    <div class="modal fade" id="addclosing">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">New Closing</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="fname" placeholder="Borrower's First Name">
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="lname" placeholder="Borrower's Last Name">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <input type="text" class="form-control" id="phone" placeholder="Borrower's Contact Phone Number">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="fname" placeholder="Co-Borrower's First Name">
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="lname" placeholder="Co-Borrower's Last Name">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <input type="text" class="form-control" id="phone" placeholder="Co-Borrower's Contact Phone Number">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <select class="form-control">
-                      <option>Purchase</option>
-                      <option>Purchase (Cash-Out)</option>
-                      <option>Refinance</option>
-                      <option>Refinance (Cash-Out)</option>
-                      <option>Reverse</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <input type="text" class="form-control" id="address" placeholder="Address of Closing Location">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="city" placeholder="City">
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="state" placeholder="State">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="city" placeholder="Zip Code">
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="state" placeholder="County">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <select class="form-control">
-                      <option>Notary</option>
-                    </select>
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="state" placeholder="Notary Fee">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <textarea class="form-control" rows="3"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <select class="form-control">
-                      <option>Lender</option>
-                    </select>
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <select class="form-control">
-                      <option>Loan Officer</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="addnotary">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">New Notary</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="fname" placeholder="Notary's First Name">
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="lname" placeholder="Notary's Last Name">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="email" class="form-control" id="address" placeholder="Notary's Email Address">
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" id="lname" placeholder="Notary's Phone Number">
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="body">
+    <!-- Content is generated here dynamically via JavaScript and/or CoffeeScript -->
   </div>
 </div>

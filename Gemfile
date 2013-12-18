@@ -32,7 +32,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'carrierwave'
 gem 'devise'
+gem 'font-awesome-sass'
+gem 'prawn'
+gem 'rmagick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -2,18 +2,15 @@
   display: none;
 }
 
-#content {
-  opacity: 0.6;
-}
-
-#closingmanager {
+#cmc, #rsmc {
   margin: auto;
   width: 75%;
 }
-.calendarcontrol {
+.cmcc, .rsmcc {
   margin: 16px;
   text-align: center;
 }
+
 #mainrow {
   margin-right:0;
 }
