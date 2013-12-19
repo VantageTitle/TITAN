@@ -1,5 +1,0 @@
-== README
-
-TITAN is an open source title agency & closing management solution written in Ruby using the Rails platform.
-
-Everything is pre-alpha, so no functionality is guarenteed at this point.
