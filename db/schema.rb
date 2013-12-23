@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223184944) do
+ActiveRecord::Schema.define(version: 20131223211755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,11 +27,30 @@ ActiveRecord::Schema.define(version: 20131223184944) do
     t.datetime "updated_at"
   end
 
+  create_table "configuration", force: true do |t|
+    t.string   "fieldName",    null: false
+    t.boolean  "booleanValue"
+    t.integer  "integerValue"
+    t.string   "stringValue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lenders", force: true do |t|
+    t.string   "organizationName", null: false
+    t.string   "emailAddress"
+    t.string   "phoneNumber"
+    t.string   "faxNumber"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "payoffs", force: true do |t|
     t.string   "fileId",        null: false
     t.string   "lenderId",      null: false
     t.string   "accountNumber", null: false
     t.string   "type",          null: false
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
