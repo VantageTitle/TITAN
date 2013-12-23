@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fileId: MyString
+  lenderId: MyString
+  accountNumber: MyString
+  type: 
+
+two:
+  fileId: MyString
+  lenderId: MyString
+  accountNumber: MyString
+  type: 
